@@ -1,0 +1,10 @@
+.presentation {
+    width: 100vw;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin: 1vh;
+    text-align: center;
+}
