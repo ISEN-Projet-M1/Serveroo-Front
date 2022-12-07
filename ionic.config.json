@@ -1,0 +1,7 @@
+{
+  "name": "Serveroo-Front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
