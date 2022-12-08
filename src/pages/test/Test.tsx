@@ -7,7 +7,7 @@ import {
     IonTitle,
     IonToolbar,
     IonGrid,
-    IonRow, IonCol, IonCard, IonCardTitle, IonCardContent, IonList, IonItem
+    IonRow, IonCol, IonCard, IonCardTitle, IonCardContent, IonList, IonItem, IonButton
 } from '@ionic/react';
 import React from "react";
 import Fleche from "../../assets/svg/flèche.svg"
@@ -31,7 +31,7 @@ const Test: React.FC = () => {
                         {
                             product.map((oneProduct: any) => {
                                 return (
-                                    <IonCol size="4" key={oneProduct.title}>
+                                    <IonCol size="12" size-lg="4" key={oneProduct.title}>
                                         <IonCard>
                                             <IonHeader>
                                                 <img src={require("../../assets/" + oneProduct.image)} alt="Minecraft"
@@ -61,5 +61,37 @@ const Test: React.FC = () => {
         </IonPage>
     );
 };
+
+function Repeat() {
+    return product.map((oneProduct: any) => {
+        return (
+            <IonCol size="12" size-lg="4" key={oneProduct.title}>
+                <IonCard>
+                    <IonHeader>
+                        <img src={require("../../assets/" + oneProduct.image)} alt="Minecraft"
+                             className="presentation"></img>
+                        <IonCardTitle className="center">{oneProduct.title}</IonCardTitle>
+                    </IonHeader>
+                    <IonCardContent>
+                        <IonList>
+                            {
+                                oneProduct.description.map((item: string) => {
+                                    return (<IonItem key={item}>
+                                        <img src={Fleche} alt="Flèche"/>
+                                        {item}
+                                    </IonItem>);
+                                })
+                            }
+                        </IonList>
+                    </IonCardContent>
+                </IonCard>
+            </IonCol>
+        )
+    })
+}
+
+function logTest() {
+    console.log("coucou");
+}
 
 export default Test;

@@ -12,9 +12,17 @@ import {
 } from '@ionic/react';
 import ExploreContainer from '../../components/ExploreContainer';
 import './Home.css';
-import React from "react";
+import React, {useState} from "react";
+import Minecraft from "../../assets/Minecraft.png"
+
 
 const Home: React.FC = () => {
+    const [text, setButtonText] = useState("click");
+
+    function changeText() {
+        setButtonText("autre");
+    }
+
     return (
         <IonPage>
             <IonHeader>
@@ -23,12 +31,6 @@ const Home: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle size="large">Blank</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-
                 <IonCard>
                     <IonCardHeader>
                         <IonCardTitle>Bouton vers page test</IonCardTitle>
@@ -37,8 +39,14 @@ const Home: React.FC = () => {
                         <IonButton routerLink="/test">
                             Test
                         </IonButton>
+                        <IonButton onClick={changeText}>
+                            Boutton
+                        </IonButton>
+                        {text}
                     </IonCardContent>
                 </IonCard>
+
+                <img src={Minecraft}/>
             </IonContent>
         </IonPage>
     );
