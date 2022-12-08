@@ -10,6 +10,29 @@ ion-text{
     margin-right : 5%;
 }
 
-.accordeon {
-    z-index: 10;
+ion-select-popover{
+    margin: 0 !important;
+}
+
+.button{
+    margin-left:5%;
+}
+
+ion-select-popover{
+    width:min-content !important;
+  
+    
+}
+
+ion-select{
+    --placeholder-color: var(--ion-color-primary);
+
+}
+
+.ion-select.popover .popover-content {
+    --min-width:var(--min-width)
+ }
+
+ion-popover{
+    --min-width:var(--min-width);
 }

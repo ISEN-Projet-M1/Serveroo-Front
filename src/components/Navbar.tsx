@@ -1,33 +1,32 @@
 import './Navbar.css';
 import Logo from "../assets/svg/logo.svg";
 import DrapeauFR from "../assets/svg/drapeauFR.svg";
-import { IonButton, IonImg, IonRow, IonGrid, IonCol, IonToolbar, IonHeader, IonText, IonAccordion, IonItem, IonLabel, IonAccordionGroup } from '@ionic/react';
+import { hasFlag } from 'country-flag-icons'
+import { IonButton,IonToolbar, IonHeader, IonText,IonItem, IonList, IonSelect, IonSelectOption, IonImg  } from '@ionic/react';
 
 interface ContainerProps { }
 
 const Navbar: React.FC<ContainerProps> = () => {
   return (
-    <div className="start">
+    <div>
       <IonHeader>
       <IonToolbar>
         <IonButton slot="start" fill="clear">
-          <img src={Logo} height="100%"/>
+          <img src={Logo} height={75}/>
         </IonButton>
         <IonText slot="end">Projet</IonText>
         <IonText slot="end">Produits</IonText>
         <IonText slot="end">FAQ</IonText>
-        <IonAccordionGroup slot="end">
-          <IonAccordion>
-            <IonItem slot="header" color="light">
-              <IonImg src={DrapeauFR}/>
-            </IonItem>
-              <div className="ion-padding accordeon" slot="content">
-                First Content
-              </div>
-          </IonAccordion>
-        </IonAccordionGroup>
+        <IonList slot="end">
+          <IonItem>
+            <IonSelect className="ion" interface="popover" placeholder="FR">
+              <IonSelectOption value="fr">FR</IonSelectOption>
+              <IonSelectOption value="en">EN</IonSelectOption>
+            </IonSelect>
+          </IonItem>
+        </IonList>
         
-        <IonButton color="primary" slot="end">Login</IonButton>
+        <IonButton color="primary" className='button' slot="end">Login</IonButton>
         
       </IonToolbar>
       </IonHeader>
