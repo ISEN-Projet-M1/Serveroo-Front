@@ -10,7 +10,6 @@ import {
     IonRow, IonCol, IonCard, IonCardTitle, IonCardContent, IonList, IonItem
 } from '@ionic/react';
 import React from "react";
-import Minecraft from "../../assets/Minecraft.png"
 import Fleche from "../../assets/svg/flèche.svg"
 import "./Test.css"
 import {product} from "../../shared/information/product/product";
@@ -62,53 +61,5 @@ const Test: React.FC = () => {
         </IonPage>
     );
 };
-
-function getAllProduct() {
-
-}
-
-function getOneProduct(product: any) {
-    return (
-        <IonCard>
-            <IonHeader>
-                <img src={Minecraft} alt="Minecraft" className="presentation"></img>
-                <div>
-                    <IonCardTitle>Serveur de jeu pour le jeu vidéo Minecraft</IonCardTitle>
-                </div>
-            </IonHeader>
-            <IonCardContent>
-                <IonList>
-                    {
-                        product.description.map((item: string) => {
-                            return (<IonItem>
-                                <img src={Fleche} alt="Flèche"/>
-                                {item}
-                            </IonItem>);
-                        })
-                    }
-                    {/*<RepeatItem {product[0].description}></RepeatItem>*/}
-                </IonList>
-            </IonCardContent>
-        </IonCard>
-    );
-}
-
-function RepeatItem(tabDescription = []) {
-    return tabDescription.map((item) => {
-        return (<IonItem>
-            <img src={Fleche} alt="Flèche"/>
-            {item}
-        </IonItem>);
-    })
-}
-
-function getItem(description: string) {
-    return (
-        <IonItem>
-            <img src={Fleche} alt="Flèche"/>
-            {description}
-        </IonItem>
-    );
-}
 
 export default Test;
