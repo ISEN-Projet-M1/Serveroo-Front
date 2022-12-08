@@ -1,38 +1,29 @@
-ion-img{
-    --size: 30%;
-    width: var(--size);
-    height: var(--size);
-    border-radius: 50%;
-    margin: 0 10px;
+.image {
+    height: max-content;
 }
 
-ion-text{
-    margin-right : 5%;
+ion-text {
+    margin-right: 5%;
 }
 
-ion-select-popover{
+ion-select-popover {
     margin: 0 !important;
+    width: auto;
 }
 
-.button{
-    margin-left:5%;
+.button {
+    margin: 0 2% 0 5%;
 }
 
-ion-select-popover{
-    width:min-content !important;
-  
-    
-}
-
-ion-select{
+ion-select {
     --placeholder-color: var(--ion-color-primary);
-
 }
 
-.ion-select.popover .popover-content {
-    --min-width:var(--min-width)
- }
+ion-select::part(icon) {
+    color: var(--ion-color-primary);
+}
 
-ion-popover{
-    --min-width:var(--min-width);
+ion-toolbar {
+    --min-height: 110px;
+    --padding-top: 20px;
 }

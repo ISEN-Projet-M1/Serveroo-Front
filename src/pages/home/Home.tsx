@@ -5,6 +5,7 @@ import {
     IonCardHeader,
     IonCardTitle,
     IonContent,
+    IonFooter,
     IonHeader,
     IonPage,
     IonTitle,
@@ -13,8 +14,9 @@ import {
 import ExploreContainer from '../../components/ExploreContainer';
 import Navbar from '../../components/Navbar';
 import './Home.css';
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Minecraft from "../../assets/Minecraft.png"
+import Footer from '../../components/Footer';
 
 
 const Home: React.FC = () => {
@@ -26,11 +28,13 @@ const Home: React.FC = () => {
 
     return (
         <IonPage>
-            
+
 
             <Navbar></Navbar>
-             
+
+            
             <IonContent fullscreen>
+                {/*
                 <IonCard>
                     <IonCardHeader>
                         <IonCardTitle>Bouton vers page test</IonCardTitle>
@@ -44,10 +48,13 @@ const Home: React.FC = () => {
                         </IonButton>
                         {text}
                     </IonCardContent>
-                </IonCard>
-
-                <img src={Minecraft}/>
+                </IonCard>*/}
             </IonContent>
+            
+
+            <IonFooter class="ion-no-border">
+                <Footer />
+            </IonFooter>
         </IonPage>
     );
 };
