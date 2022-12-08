@@ -1,0 +1,15 @@
+ion-img{
+    --size: 30%;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+ion-text{
+    margin-right : 5%;
+}
+
+.accordeon {
+    z-index: 10;
+}

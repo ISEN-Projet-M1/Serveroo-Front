@@ -11,6 +11,7 @@ import {
     IonToolbar
 } from '@ionic/react';
 import ExploreContainer from '../../components/ExploreContainer';
+import Navbar from '../../components/Navbar';
 import './Home.css';
 import React, {useState} from "react";
 import Minecraft from "../../assets/Minecraft.png"
@@ -25,11 +26,10 @@ const Home: React.FC = () => {
 
     return (
         <IonPage>
-            <IonHeader>
-                <IonToolbar>
-                    <IonTitle>Blank</IonTitle>
-                </IonToolbar>
-            </IonHeader>
+            
+
+            <Navbar></Navbar>
+             
             <IonContent fullscreen>
                 <IonCard>
                     <IonCardHeader>
