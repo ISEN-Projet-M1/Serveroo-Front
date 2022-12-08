@@ -10,6 +10,10 @@ ion-img{
     border-radius: 50%;
     margin: 0 10px;
 }
+.lang {
+    margin: 0 0 0 40px;
+    background-color: transparent;
+}
 
 ion-text{
     margin-right : 5%;
@@ -43,9 +47,25 @@ ion-text{
 }
 
 .social {
-    padding: 0 30px 30px 0;
+    padding: 0 80px 30px 0;
 }
 
 .firstelmt {
     margin-left: 100px;
+}
+.footer {
+    margin-left: 20px;
+}
+
+ion-select {
+    --placeholder-color: var(--ion-color-primary);
+}
+
+ion-select::part(icon) {
+    color: var(--ion-color-primary);
+}
+
+ion-select-popover {
+    margin: 0 !important;
+    width: auto;
 }

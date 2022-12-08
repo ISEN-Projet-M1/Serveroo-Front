@@ -1,9 +1,11 @@
 .image {
     height: max-content;
+    margin-left: 30px;
 }
 
 ion-text {
-    margin-right: 5%;
+    margin-right: 30px;
+    font-size: 20px;
 }
 
 ion-select-popover {
@@ -12,7 +14,9 @@ ion-select-popover {
 }
 
 .button {
-    margin: 0 2% 0 5%;
+    font-size: 20px;
+
+    margin: 0 50px 0 40px;
 }
 
 ion-select {
@@ -26,4 +30,8 @@ ion-select::part(icon) {
 ion-toolbar {
     --min-height: 110px;
     --padding-top: 20px;
+}
+
+.btn {
+    padding: 10px;
 }

@@ -1,21 +1,33 @@
 import './Footer.css';
 import Logo from "../assets/svg/logo.svg";
-import Paiement from "../assets/svg/paiement.svg";
-import Insta from "../assets/svg/Instagram.svg";
-import Facebook from "../assets/svg/Facebook.svg";
-import Linkedin from "../assets/svg/Linkedin.svg";
-import Twitter from "../assets/svg/Twitter.svg";
-import Youtube from "../assets/svg/Youtube.svg";
-import { IonAccordion, IonAccordionGroup, IonButton, IonCol, IonFooter, IonImg, IonItem, IonRow } from '@ionic/react';
+import DrapeauFR from "../assets/svg/drapeauFR.svg";
+import Paiement from "../assets/svg/footer/paiement.svg";
+import Insta from "../assets/svg/footer/Instagram.svg";
+import Facebook from "../assets/svg/footer/Facebook.svg";
+import Linkedin from "../assets/svg/footer/Linkedin.svg";
+import Twitter from "../assets/svg/footer/Twitter.svg";
+import Youtube from "../assets/svg/footer/Youtube.svg";
+import { IonCol, IonItem, IonList, IonRow, IonSelect, IonSelectOption } from '@ionic/react';
 
 interface ContainerProps { }
 
 const Navbar: React.FC<ContainerProps> = () => {
     return (
-        <div>
+        <div className='footer'>
             <IonRow>
                 <IonCol>
-                    <img src={Logo} height={70} />
+                    <IonRow>
+                        <img src={Logo} height={70} />
+                        <IonList className='lang'>
+                            <IonItem>
+                                <img src={DrapeauFR} height={20} className='flag'/>
+                                <IonSelect className="ion" interface="popover" placeholder="" disabled>
+                                    <IonSelectOption value="fr">FR</IonSelectOption>
+                                    <IonSelectOption value="en">EN</IonSelectOption>
+                                </IonSelect>
+                            </IonItem>
+                        </IonList>
+                    </IonRow>
                     <p className='title desc'>Haec enim est tyrannorum vita nimirum, in qua nulla fides, nulla caritas, nulla stabilis benevolentiae potest esse fiducia, omnia semper suspecta atque sollicita, nullus locus amicitiae.
                     </p>
                     <p className='text'>Moyens de paiement</p>
@@ -61,14 +73,14 @@ const Navbar: React.FC<ContainerProps> = () => {
 
             <IonRow className='lastelmt'>
                 <div>
-                    <p className='title'>Copyright 2022/2023 serveroo.com</p>
+                    <p className='title desc'>Copyright 2022/2023 serveroo.com</p>
                 </div>
                 <div className='social'>
-                    <img src={Facebook} />
-                    <img src={Linkedin} />
-                    <img src={Insta} />
-                    <img src={Twitter} />
-                    <img src={Youtube} />
+                    <img src={Facebook} height={70} />
+                    <img src={Linkedin} height={70} />
+                    <img src={Insta} height={70} />
+                    <img src={Twitter} height={70} />
+                    <img src={Youtube} height={70} />
                 </div>
 
 
