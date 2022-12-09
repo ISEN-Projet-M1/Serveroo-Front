@@ -214,6 +214,7 @@ ion-toolbar {
     justify-content: center;
     align-items: center;
     margin: 50px;
+    gap: 20px;
 }
 
 .titleFiveContent {
@@ -222,5 +223,23 @@ ion-toolbar {
     color: var(--ion-color-primary);
     margin: 0;
     width: 1000px;
-    margin: 25px;
+    margin-bottom: 25px;
+}
+
+.titleFAQ {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--ion-color-dark);
+    margin: 0;
+    width: 1000px;
+    height: min-content;
+}
+
+.descFAQ {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--ion-color-medium);
+    width: 1000px;
+    margin-left: 5px;
+    height: min-content;
 }

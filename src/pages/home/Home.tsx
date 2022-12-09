@@ -10,7 +10,9 @@ import {
     IonLabel,
     IonPage,
     IonRow,
-    useIonViewDidEnter
+    useIonViewDidEnter,
+    useIonViewDidLeave,
+    useIonViewWillEnter
 } from '@ionic/react';
 import Navbar from '../../components/Navbar';
 import './Home.css';
@@ -26,6 +28,7 @@ import { useEffect, useRef } from 'react';
 import { logoGooglePlaystore } from 'ionicons/icons';
 import mobile from '../../assets/svg/storyset/mobile.svg';
 import question from '../../assets/svg/storyset/question.svg';
+import faqbar from '../../assets/svg/icons/faqbar.svg';
 
 const Home: React.FC = () => {
     const testtaz = useRef<HTMLIonContentElement>(null);
@@ -51,10 +54,17 @@ const Home: React.FC = () => {
         secondContent?.scrollIntoView({ behavior: 'smooth' });
     }
 
+    function getHeight() {
+        //get the height of the faqbar and return it to the css 
+        const faqbar = document.querySelector('.faqbar');
+        const height = faqbar?.clientHeight;
+        console.log(height);
 
+        return 81;
+    }
 
     return (
-        <IonPage id='page'>
+        <IonPage id='page' >
             <IonContent fullscreen>
                 <Navbar />
 
@@ -143,31 +153,52 @@ const Home: React.FC = () => {
                     </div>
                     <IonRow className='rowfiveContent'>
                         <img src={question} className='' />
-                        <IonCol className='' size='8'>
+                        <IonCol className='colfiveContent' size='8'>
                             <p className='titleFiveContent'>Questions fréquemment posées</p>
                             <IonAccordionGroup>
                                 <IonAccordion value="first">
-                                    <IonItem slot="header" color="light">
-                                        <IonLabel>First Accordion</IonLabel>
+                                    <IonItem slot="header" color="light" className='titleFAQ'>
+                                        <IonLabel>Re explorabat adducta a locum ?</IonLabel>
                                     </IonItem>
                                     <div className='ion-padding' slot="content">
-                                        First Content
+                                        <IonRow>
+                                            <img src={faqbar} className='imgFAQ' height={getHeight+'px'}/>
+                                            <a className='descFAQ'>wHanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
+                                            </a>
+                                        </IonRow>
+
                                     </div>
                                 </IonAccordion>
                                 <IonAccordion value="second">
-                                    <IonItem slot="header" color="light">
-                                        <IonLabel>Second Accordion</IonLabel>
+                                    <IonItem slot="header" color="light" className='titleFAQ'>
+                                        <IonLabel >Re explorabat adducta a locum ?</IonLabel>
                                     </IonItem>
-                                    <div className='ion-padding' slot="content">
-                                        Second Content
+                                    <div className='ion-padding descFAQ' slot="content">
+                                        Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
                                     </div>
                                 </IonAccordion>
                                 <IonAccordion value="third">
-                                    <IonItem slot="header" color="light">
-                                        <IonLabel>Third Accordion</IonLabel>
+                                    <IonItem slot="header" color="light" className='titleFAQ'>
+                                        <IonLabel >Re explorabat adducta a locum ?</IonLabel>
                                     </IonItem>
-                                    <div className='ion-padding' slot="content">
-                                        Third Content
+                                    <div className='ion-padding descFAQ' slot="content">
+                                        Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
+                                    </div>
+                                </IonAccordion>
+                                <IonAccordion value="four">
+                                    <IonItem slot="header" color="light" className='titleFAQ'>
+                                        <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                    </IonItem>
+                                    <div className='ion-padding descFAQ' slot="content">
+                                        Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
+                                    </div>
+                                </IonAccordion>
+                                <IonAccordion value="five">
+                                    <IonItem slot="header" color="light" className='titleFAQ'>
+                                        <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                    </IonItem>
+                                    <div className='ion-padding descFAQ' slot="content">
+                                        Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
                                     </div>
                                 </IonAccordion>
                             </IonAccordionGroup>
