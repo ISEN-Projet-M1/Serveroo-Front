@@ -38,8 +38,8 @@ ion-toolbar {
 }
 
 ion-modal{
-    --height : 950px;
-    --width : 1100px;
+    --height : max-content;
+    --width : max-content;
 }
 
 ion-grid{
