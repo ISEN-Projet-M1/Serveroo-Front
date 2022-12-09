@@ -1,0 +1,11 @@
+.connexion{
+    margin-left :2% !important ;
+}
+
+.imgConnexion{
+   display: block;
+   margin-right: auto;
+   margin-left: auto;
+   width : 450px;
+   margin-bottom :4%;
+}

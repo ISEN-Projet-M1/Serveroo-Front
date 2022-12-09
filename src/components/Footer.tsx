@@ -17,10 +17,10 @@ const Navbar: React.FC<ContainerProps> = () => {
             <IonRow>
                 <IonCol>
                     <IonRow>
-                        <img src={Logo} height={70} />
+                        <img src={Logo} height={70} alt="logo" />
                         <IonList className='lang'>
                             <IonItem>
-                                <img src={DrapeauFR} height={20} className='flag'/>
+                                <img src={DrapeauFR} height={20} className='flag' alt='drapeauFR'/>
                                 <IonSelect className="ion" interface="popover" placeholder="" disabled>
                                     <IonSelectOption value="fr">FR</IonSelectOption>
                                     <IonSelectOption value="en">EN</IonSelectOption>
@@ -32,7 +32,7 @@ const Navbar: React.FC<ContainerProps> = () => {
                     </p>
                     <p className='text'>Moyens de paiement</p>
                     <div>
-                        <img src={Paiement} height={50} />
+                        <img src={Paiement} height={50} alt="paiement"/>
                     </div>
 
 
@@ -76,11 +76,11 @@ const Navbar: React.FC<ContainerProps> = () => {
                     <p className='title desc'>Copyright 2022/2023 serveroo.com</p>
                 </div>
                 <div className='social'>
-                    <img src={Facebook} height={70} />
-                    <img src={Linkedin} height={70} />
-                    <img src={Insta} height={70} />
-                    <img src={Twitter} height={70} />
-                    <img src={Youtube} height={70} />
+                    <img src={Facebook} height={70} alt="facebook" />
+                    <img src={Linkedin} height={70} alt="linkedin" />
+                    <img src={Insta} height={70} alt="instagram" />
+                    <img src={Twitter} height={70} alt="twitter"/>
+                    <img src={Youtube} height={70} alt="youtube" />
                 </div>
 
 
