@@ -13,10 +13,11 @@ ion-select-popover {
     width: auto;
 }
 
-.button {
+.login {
     font-size: 20px;
-
+    height : 50px;
     margin: 0 50px 0 40px;
+    margin-left: 5%;
 }
 
 ion-select {

@@ -26,7 +26,7 @@ const Navbar: React.FC<ContainerProps> = () => {
           </IonItem>
         </IonList>
         
-        <IonButton color="primary" className='button' slot="end"><span className='btn'>Login</span></IonButton>
+        <IonButton color="primary" className='login' slot="end"><span className='btn'>Login</span></IonButton>
         
       </IonToolbar>
       </IonHeader>
