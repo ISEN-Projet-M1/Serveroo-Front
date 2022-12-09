@@ -2,7 +2,7 @@ import './Navbar.css';
 import Logo from "../assets/svg/logo.svg";
 import DrapeauFR from "../assets/svg/drapeauFR.svg";
 import React, {useState } from 'react';
-import { IonButton,IonToolbar, IonHeader,IonItem, IonList, IonSelect, IonSelectOption, IonModal, IonSegment, IonSegmentButton, IonLabel,IonRow,IonCol,IonGrid,IonIcon} from '@ionic/react';
+import { IonButton,IonToolbar, IonHeader,IonItem, IonList, IonSelect, IonSelectOption, IonModal, IonSegment, IonSegmentButton, IonLabel,IonRow,IonCol,IonGrid,IonIcon,IonText} from '@ionic/react';
 import {closeOutline} from 'ionicons/icons';
 import Inscription from '../components/Inscription';
 import Connexion from '../components/Connexion';
@@ -34,7 +34,9 @@ const Navbar: React.FC<ContainerProps> = () => {
           <IonButton slot="start" fill="clear" className='image'>
             <img src={Logo} height={70} alt="logo"/>
           </IonButton>
-          
+          <IonText slot="end">Projet</IonText>
+          <IonText slot="end">Produits</IonText>
+          <IonText slot="end">FAQ</IonText>
           <IonList slot="end">
             <IonItem>
               <img src={DrapeauFR} height={20} alt="drapeauFR" />

@@ -2,10 +2,6 @@
     color:red;
 }
 
-p{
-    width: fit-content;
-}
-
 .ion-input{
     margin-top:3%;
     border : 2px solid var(--ion-color-primary) !important;
