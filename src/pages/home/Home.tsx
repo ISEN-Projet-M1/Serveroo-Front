@@ -1,24 +1,36 @@
 import {
     createAnimation,
+    IonAccordion,
+    IonAccordionGroup,
     IonButton,
     IonCol,
     IonContent,
+    IonIcon,
+    IonItem,
+    IonLabel,
     IonPage,
     IonRow,
-    useIonViewDidEnter,
-    withIonLifeCycle,
+    useIonViewDidEnter
 } from '@ionic/react';
 import Navbar from '../../components/Navbar';
 import './Home.css';
 import Footer from '../../components/Footer';
 import servElmt from '../../assets/svg/storyset/servElmt.svg';
 import doubleFleche from '../../assets/svg/icons/doublefleche.svg';
+import world from '../../assets/svg/icons/world.svg';
 import serv from '../../assets/svg/storyset/serv.svg';
 import servWork from '../../assets/svg/storyset/servWork.svg';
 import servStatus from '../../assets/svg/storyset/servStatus.svg';
 import designerGirl from '../../assets/svg/storyset/designerGirl.svg';
+import { useEffect, useRef } from 'react';
+import { logoGooglePlaystore } from 'ionicons/icons';
+import mobile from '../../assets/svg/storyset/mobile.svg';
+import question from '../../assets/svg/storyset/question.svg';
 
 const Home: React.FC = () => {
+    const testtaz = useRef<HTMLIonContentElement>(null);
+
+
     useIonViewDidEnter(() => {
         createAnimation()
             .addElement(document.querySelector('.doubleFleche')!)
@@ -34,9 +46,12 @@ const Home: React.FC = () => {
     });
 
     function scrollToSecond() {
+        console.log('scroll')
         const secondContent = document.querySelector('.secondContent');
         secondContent?.scrollIntoView({ behavior: 'smooth' });
     }
+
+
 
     return (
         <IonPage id='page'>
@@ -58,7 +73,7 @@ const Home: React.FC = () => {
 
 
                         <div>
-                            <img src={servElmt} className='imgFirstContent'/>
+                            <img src={servElmt} className='imgFirstContent' />
                         </div>
 
                     </IonRow>
@@ -69,23 +84,23 @@ const Home: React.FC = () => {
                 <div className='secondContent'>
                     <div className='divTitle'>
                         <p className='divTitleText'>Objectifs</p>
-                    <p className='projetText'>Notre projet</p>
+                        <p className='projetText'>Notre projet</p>
                     </div>
                     <IonRow class='rowSecondContent'>
                         <IonCol className='projetPart'>
-                            <img src={serv} className='imgSecondContent'/>
+                            <img src={serv} className='imgSecondContent' />
                             <p className='titleProjetPart'>Nous possèdons nos propres serveurs et vos données sont sécurisées</p>
                             <p className='textProjetPart'>Nous avons nos propres serveurs physiques stockés en France dans une salle de serveur dédié. Nous assurons le contrôle sur vos données et respectons la loi française</p>
                             <p className='linkOffer'>Je découvre l’offre</p>
                         </IonCol>
                         <IonCol>
-                            <img src={servStatus} className='imgSecondContent'/>
+                            <img src={servStatus} className='imgSecondContent' />
                             <p className='titleProjetPart'>Gerez vos serveur en un clic directement sur le web</p>
                             <p className='textProjetPart'>Grâce à un pannel de contrôle détaillé et complet vous pouvez gérer votre produit comme bon vous semble directement en ligne</p>
                             <p className='linkOffer'>Je découvre l’offre</p>
                         </IonCol>
                         <IonCol>
-                            <img src={servWork} className='imgSecondContent'/>
+                            <img src={servWork} className='imgSecondContent' />
                             <p className='titleProjetPart'>Penser pour les étudiants fait par des étudiants</p>
                             <p className='textProjetPart'>Tu es étudiant et tu souhaites héberger ton projet ou tu souhaites acquérir un serveur à bas prix : cette solution est faite pour toi</p>
                             <p className='linkOffer'>Je découvre l’offre</p>
@@ -97,11 +112,69 @@ const Home: React.FC = () => {
 
                 <div className='thirdContent'>
                     <IonRow class='rowThirdContent'>
-                        <img src={designerGirl} className='imgThirdContent'/>
+                        <img src={designerGirl} className='imgThirdContent' />
                         <IonCol className='textThirdContent'>
                             <p className='titleThirdContent'>Découvre nos différents serveurs et trouve celui qui te correspond</p>
                             <IonButton color="primary" className='products'><span className='productsText'>Voir les produits</span></IonButton>
                         </IonCol>
+                    </IonRow>
+                </div>
+
+                <div className='fourthContent'>
+                    <div className='divTitle'>
+                        <p className='divTitleText'>Mobile</p>
+                        <p className='projetText'>Installe l’application mobile pour gérer ton serveur n’importe où et n’importe quand </p>
+                    </div>
+                    <IonRow class='rowfourthContent'>
+                        <IonCol className='colFourthContent'>
+                            <p className='titleFourthContent'>Installe l’application dès maintenant !</p>
+                            <IonButton color="primary" className='playStore'><IonIcon src={logoGooglePlaystore}></IonIcon><span className='playStoreTxt'> Installation sur Google Play</span></IonButton>
+                        </IonCol>
+                        <IonCol>
+                            <img src={mobile} className='' />
+                        </IonCol>
+
+                    </IonRow>
+                </div>
+
+                <div className='fiveContent'>
+                    <div className='divTitle'>
+                        <p className='divTitleText'>FAQ</p>
+                    </div>
+                    <IonRow className='rowfiveContent'>
+                        <img src={question} className='' />
+                        <IonCol className='' size='8'>
+                            <p className='titleFiveContent'>Questions fréquemment posées</p>
+                            <IonAccordionGroup>
+                                <IonAccordion value="first">
+                                    <IonItem slot="header" color="light">
+                                        <IonLabel>First Accordion</IonLabel>
+                                    </IonItem>
+                                    <div className='ion-padding' slot="content">
+                                        First Content
+                                    </div>
+                                </IonAccordion>
+                                <IonAccordion value="second">
+                                    <IonItem slot="header" color="light">
+                                        <IonLabel>Second Accordion</IonLabel>
+                                    </IonItem>
+                                    <div className='ion-padding' slot="content">
+                                        Second Content
+                                    </div>
+                                </IonAccordion>
+                                <IonAccordion value="third">
+                                    <IonItem slot="header" color="light">
+                                        <IonLabel>Third Accordion</IonLabel>
+                                    </IonItem>
+                                    <div className='ion-padding' slot="content">
+                                        Third Content
+                                    </div>
+                                </IonAccordion>
+                            </IonAccordionGroup>
+                        </IonCol>
+                        <IonCol>
+                        </IonCol>
+
                     </IonRow>
                 </div>
 
@@ -112,4 +185,4 @@ const Home: React.FC = () => {
     );
 };
 
-export default withIonLifeCycle(Home);
+export default Home;    
