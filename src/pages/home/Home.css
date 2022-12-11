@@ -2,13 +2,9 @@ ion-toolbar {
     padding-top: 10%;
 }
 
-.firstContent {
-    height: 100vh;
-}
-
 .doubleFleche {
     display: block;
-    margin: 0 auto;
+    margin: 50px auto;
     width: 47px;
     height: 50px;
     cursor: pointer;
@@ -49,14 +45,9 @@ ion-toolbar {
 }
 
 .imgFirstContent {
-    width: 100%;
+    width: 900%;
     height: 100%;
     margin: 20px;
-}
-
-.secondContent {
-    height: 100vh;
-
 }
 
 .rowSecondContent {
@@ -72,7 +63,6 @@ ion-toolbar {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px;
 }
 
 .divTitleText {
@@ -89,6 +79,7 @@ ion-toolbar {
     font-size: 30px;
     color: var(--ion-color-dark);
     margin: 0;
+    text-align: center;
 }
 
 .rowSecondContent {
@@ -127,24 +118,15 @@ ion-toolbar {
     color: var(--ion-color-primary);
     text-align: center;
     cursor: pointer;
-}
-
-.thirdContent {
-    height: 100vh;
+    margin: 50px;
 }
 
 .rowThirdContent {
-    height: 50vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: var(--ion-color-danger-rgba);
     align-items: center;
-    margin-top: 50vh;
-}
-
-.imgThirdContent {
-    height: 50vh;
 }
 
 .titleThirdContent {
@@ -152,8 +134,7 @@ ion-toolbar {
     font-weight: bold;
     color: var(--ion-color-dark);
     text-align: center;
-    margin: 0;
-    width: 1000px;
+    margin: 30px;
 }
 
 .textThirdContent {
@@ -164,7 +145,7 @@ ion-toolbar {
 }
 
 .products {
-    margin: 50px auto 0 auto;
+    margin: 0 auto 50px auto;
     height: 50px;
 }
 
@@ -174,9 +155,10 @@ ion-toolbar {
 }
 
 .fourthContent {
-    height: 100vh;
     background-image: url('../../assets/svg/icons/world.svg');
     background-repeat: no-repeat;
+    background-size: contain;
+    margin: 100px 0 100px 0;
 }
 
 .rowfourthContent {
@@ -185,7 +167,9 @@ ion-toolbar {
     justify-content: center;
     align-items: center;
     margin: 50px;
+    gap: 30px;
 }
+
 
 .titleFourthContent {
     font-size: 30px;
@@ -197,7 +181,7 @@ ion-toolbar {
     width: 90%;
 }
 .playStore {
-    margin: 25px auto 0 25px;
+    margin-left: 25px;
     height: 50px;
 }
 
@@ -213,8 +197,8 @@ ion-toolbar {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 50px;
-    gap: 20px;
+    margin: 0 auto 0 auto;
+    margin-bottom: 30px;
 }
 
 .titleFiveContent {
@@ -222,7 +206,6 @@ ion-toolbar {
     font-weight: bold;
     color: var(--ion-color-primary);
     margin: 0;
-    width: 1000px;
     margin-bottom: 25px;
 }
 
@@ -242,4 +225,22 @@ ion-toolbar {
     width: 1000px;
     margin-left: 5px;
     height: min-content;
+}
+
+#page > ion-content > div.fiveContent > ion-row > ion-col:nth-child(3) {
+    display: none;
+}
+
+#page > ion-content > div.fiveContent > ion-row > ion-col.colfiveContent.md {
+    margin: 50px auto 50px auto;
+}
+
+.ion-padding.descFAQ {
+    width: fit-content;
+}
+
+.mobileImg{
+    max-width: fit-content;
+    width: 100%;
+    height: 100%;
 }

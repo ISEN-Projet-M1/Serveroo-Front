@@ -11,29 +11,21 @@ import {
     IonPage,
     IonRow,
     useIonViewDidEnter,
-    useIonViewDidLeave,
-    useIonViewWillEnter
 } from '@ionic/react';
 import Navbar from '../../components/Navbar';
 import './Home.css';
 import Footer from '../../components/Footer';
 import servElmt from '../../assets/svg/storyset/servElmt.svg';
 import doubleFleche from '../../assets/svg/icons/doublefleche.svg';
-import world from '../../assets/svg/icons/world.svg';
 import serv from '../../assets/svg/storyset/serv.svg';
 import servWork from '../../assets/svg/storyset/servWork.svg';
 import servStatus from '../../assets/svg/storyset/servStatus.svg';
 import designerGirl from '../../assets/svg/storyset/designerGirl.svg';
-import { useEffect, useRef } from 'react';
 import { logoGooglePlaystore } from 'ionicons/icons';
 import mobile from '../../assets/svg/storyset/mobile.svg';
 import question from '../../assets/svg/storyset/question.svg';
-import faqbar from '../../assets/svg/icons/faqbar.svg';
 
 const Home: React.FC = () => {
-    const testtaz = useRef<HTMLIonContentElement>(null);
-
-
     useIonViewDidEnter(() => {
         createAnimation()
             .addElement(document.querySelector('.doubleFleche')!)
@@ -54,14 +46,7 @@ const Home: React.FC = () => {
         secondContent?.scrollIntoView({ behavior: 'smooth' });
     }
 
-    function getHeight() {
-        //get the height of the faqbar and return it to the css 
-        const faqbar = document.querySelector('.faqbar');
-        const height = faqbar?.clientHeight;
-        console.log(height);
-
-        return 81;
-    }
+    
 
     return (
         <IonPage id='page' >
@@ -141,7 +126,7 @@ const Home: React.FC = () => {
                             <IonButton color="primary" className='playStore'><IonIcon src={logoGooglePlaystore}></IonIcon><span className='playStoreTxt'> Installation sur Google Play</span></IonButton>
                         </IonCol>
                         <IonCol>
-                            <img src={mobile} className='' />
+                            <img src={mobile} className='mobileImg' />
                         </IonCol>
 
                     </IonRow>
@@ -162,7 +147,6 @@ const Home: React.FC = () => {
                                     </IonItem>
                                     <div className='ion-padding' slot="content">
                                         <IonRow>
-                                            <img src={faqbar} className='imgFAQ' height={getHeight+'px'}/>
                                             <a className='descFAQ'>wHanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
                                             </a>
                                         </IonRow>

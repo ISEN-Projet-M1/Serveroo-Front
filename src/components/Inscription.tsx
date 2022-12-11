@@ -32,24 +32,23 @@ const Inscription: React.FC<ContainerProps> = () => {
                 <IonCol size='12'><IonItem lines='none'>
                     <IonLabel position="stacked" className='label'>
                         <IonRow>Adresse mail<p className='rouge'>*</p></IonRow></IonLabel>
-                    <IonInput className='ion-input' placeholder="exemple@email.com"></IonInput>
+                    <IonInput className='ion-input' type="email" placeholder="exemple@email.com"></IonInput>
                 </IonItem></IonCol>
                 
             </IonRow>
-            <IonRow>
-                <IonCol size='5'>
+            <IonRow className='mdpRow'>
+                <IonCol size='4'>
                     <IonItem lines='none'>
                         <IonLabel position="stacked" className='label'>
                             <IonRow>Mot de passe<p className='rouge'>*</p></IonRow></IonLabel>
-                        <IonInput className='test ion-input' placeholder="Mot de passe"></IonInput>
+                        <IonInput className='test ion-input' type="password" placeholder="Mot de passe"></IonInput>
                     </IonItem>
                 </IonCol>
-                <IonCol size='2'></IonCol>
-                <IonCol size='5'>
+                <IonCol size='8'>
                     <IonItem lines='none'>
                         <IonLabel position="stacked" className='label'>
                             <IonRow>Confirmation du mot de passe<p className='rouge'>*</p></IonRow></IonLabel>
-                        <IonInput className='test ion-input' placeholder="Confirmation du mot de passe"></IonInput>
+                        <IonInput className='test ion-input' type="password" placeholder="Confirmation du mot de passe"></IonInput>
                     </IonItem>
                 </IonCol>
             </IonRow>
@@ -73,8 +72,8 @@ const Inscription: React.FC<ContainerProps> = () => {
             <IonRow>
                 <IonCol size='12'>
                     <IonItem lines='none'>
-                        <IonLabel position="stacked" className='label'>Nom de l'école/entreprise</IonLabel>
-                        <IonInput className='ion-input' placeholder="Nom de l'école/entreprise"></IonInput>
+                        <IonLabel position="stacked" className='label'>Nom de l'école ou de l'entreprise</IonLabel>
+                        <IonInput className='ion-input' placeholder="Nom de l'école ou de l'entreprise"></IonInput>
                     </IonItem>
                 </IonCol>
                 

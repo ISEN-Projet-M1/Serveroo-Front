@@ -16,7 +16,7 @@ const Navbar: React.FC<ContainerProps> = () => {
         <div className='footer'>
             <IonRow>
                 <IonCol>
-                    <IonRow>
+                    <IonRow className='logoLang'>
                         <img src={Logo} height={70} alt="logo" />
                         <IonList className='lang'>
                             <IonItem>
@@ -32,7 +32,7 @@ const Navbar: React.FC<ContainerProps> = () => {
                     </p>
                     <p className='text'>Moyens de paiement</p>
                     <div>
-                        <img src={Paiement} height={50} alt="paiement"/>
+                        <img src={Paiement} height={50} alt="paiement" className='paiement'/>
                     </div>
 
 
@@ -76,11 +76,11 @@ const Navbar: React.FC<ContainerProps> = () => {
                     <p className='title desc'>Copyright 2022/2023 serveroo.com</p>
                 </div>
                 <div className='social'>
-                    <img src={Facebook} height={70} alt="facebook" />
-                    <img src={Linkedin} height={70} alt="linkedin" />
-                    <img src={Insta} height={70} alt="instagram" />
-                    <img src={Twitter} height={70} alt="twitter"/>
-                    <img src={Youtube} height={70} alt="youtube" />
+                    <img src={Facebook} height={70} alt="facebook" className='btnSocial'/>
+                    <img src={Linkedin} height={70} alt="linkedin" className='btnSocial'/>
+                    <img src={Insta} height={70} alt="instagram" className='btnSocial'/>
+                    <img src={Twitter} height={70} alt="twitter" className='btnSocial'/>
+                    <img src={Youtube} height={70} alt="youtube" className='btnSocial'/>
                 </div>
 
 

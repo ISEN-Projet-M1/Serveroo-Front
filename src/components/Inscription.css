@@ -22,6 +22,15 @@ input {
     border-radius : 5px;
 }
 
+#ion-react-wrapper > ion-grid > div > ion-grid > ion-row:nth-child(4) > ion-col > ion-item > ion-select {
+    padding-left :1vw !important;
+}
+
+#ion-react-wrapper > ion-grid > div > ion-grid > ion-row.mdpRow.md > ion-col:nth-child(2) > ion-item > ion-input {
+    margin-top: 2.5% !important;
+}
+
+
 .ion-checkbox {
     --size: 32px;
     --background-checked: var(--ion-color-primary);

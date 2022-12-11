@@ -15,7 +15,7 @@ const Inscription: React.FC<ContainerProps> = () => {
                     <IonItem lines='none'>
                         <IonLabel position="stacked" className='label'>
                             <IonRow>Adresse mail<p className='rouge'>*</p></IonRow></IonLabel>
-                        <IonInput className='ion-input' placeholder="exemple@email.com"></IonInput>
+                        <IonInput className='ion-input' type='email' placeholder="exemple@email.com"></IonInput>
                     </IonItem>
                 </IonCol>
                     
@@ -25,7 +25,7 @@ const Inscription: React.FC<ContainerProps> = () => {
                     <IonItem lines='none'>
                         <IonLabel position="stacked" className='label'>
                             <IonRow>Mot de passe<p className='rouge'>*</p></IonRow></IonLabel>
-                        <IonInput className='ion-input' placeholder="Mot de passe"></IonInput>
+                        <IonInput className='ion-input' type='password' placeholder="Mot de passe"></IonInput>
                     </IonItem>
                 </IonCol>
                     

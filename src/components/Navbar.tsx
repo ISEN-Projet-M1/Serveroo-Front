@@ -27,16 +27,30 @@ const Navbar: React.FC<ContainerProps> = () => {
     return ((choix === "inscription") ? (<Inscription></Inscription>) : (<Connexion></Connexion>));
   }
 
+  function goToProject(){
+    const secondContent = document.querySelector('.secondContent');
+        secondContent?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function goToFAQ(){
+    const thirdContent = document.querySelector('.rowfiveContent');
+        thirdContent?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function goToProducts(){
+    document.location.href = '/test';
+  }
+
   return (
-    <div>
-      <IonHeader class="ion-no-border">
+    <div className='nabbar'>
+      <IonHeader class="ion-no-border" >
         <IonToolbar>
-          <IonButton slot="start" fill="clear" className='image'>
-            <img src={Logo} height={70} alt="logo"/>
+          <IonButton slot="start" fill="clear" className='image' href='/Home'>
+            <img src={Logo} height={70} alt="logo" className='logoNavbar'/>
           </IonButton>
-          <IonText slot="end">Projet</IonText>
-          <IonText slot="end">Produits</IonText>
-          <IonText slot="end">FAQ</IonText>
+          <IonText slot="end" onClick={goToProject} className='btnText'>Projet</IonText>
+          <IonText slot="end" onClick={goToProducts} className='btnText' >Produits</IonText>
+          <IonText slot="end" onClick={goToFAQ} className='btnText'>FAQ</IonText>
           <IonList slot="end">
             <IonItem>
               <img src={DrapeauFR} height={20} alt="drapeauFR" />
@@ -62,7 +76,7 @@ const Navbar: React.FC<ContainerProps> = () => {
                   </IonSegment>
                 </IonCol>
                 <IonCol className='droite'>
-                  <IonIcon size="large" src={closeOutline} onClick={()=> setMyModal({isOpen:false})}></IonIcon>
+                  <IonIcon className='closePopUp' size="large" src={closeOutline} onClick={()=> setMyModal({isOpen:false})}></IonIcon>
                 </IonCol>
               </IonRow>
               
