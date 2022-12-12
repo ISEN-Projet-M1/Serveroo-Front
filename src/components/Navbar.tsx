@@ -6,6 +6,7 @@ import { IonButton,IonToolbar, IonHeader,IonItem, IonList, IonSelect, IonSelectO
 import {closeOutline} from 'ionicons/icons';
 import Inscription from '../components/Inscription';
 import Connexion from '../components/Connexion';
+import {useHistory} from 'react-router-dom';
 
 interface ContainerProps { }
 
@@ -23,6 +24,12 @@ const Navbar: React.FC<ContainerProps> = () => {
     }
   }
 
+  const history = useHistory();
+
+  const routeChange = (path : string) =>{ 
+    history.push(path);
+  }
+
   function ChoixInscriptionConnexion() {
     return ((choix === "inscription") ? (<Inscription></Inscription>) : (<Connexion></Connexion>));
   }
@@ -37,19 +44,17 @@ const Navbar: React.FC<ContainerProps> = () => {
         thirdContent?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  function goToProducts(){
-    document.location.href = '/test';
-  }
+ 
 
   return (
     <div className='nabbar'>
       <IonHeader class="ion-no-border" >
         <IonToolbar>
-          <IonButton slot="start" fill="clear" className='image' href='/Home'>
+          <IonButton slot="start" fill="clear" className='image' onClick={e => routeChange('/home')}>
             <img src={Logo} height={70} alt="logo" className='logoNavbar'/>
           </IonButton>
           <IonText slot="end" onClick={goToProject} className='btnText'>Projet</IonText>
-          <IonText slot="end" onClick={goToProducts} className='btnText' >Produits</IonText>
+          <IonText slot="end" onClick={e => routeChange('product')} className='btnText' >Produits</IonText>
           <IonText slot="end" onClick={goToFAQ} className='btnText'>FAQ</IonText>
           <IonList slot="end">
             <IonItem>
