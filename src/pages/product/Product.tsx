@@ -8,8 +8,10 @@ import {product} from "../../shared/information/product/product";
 import Navbar from '../../components/Navbar/Navbar';
 import {Swiper, SwiperSlide} from "swiper/react";
 
-// import 'swiper/swiper.min.css';
-
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import '@ionic/react/css/ionic-swiper.css';
 
 const Product: React.FC = () => {
     return (
