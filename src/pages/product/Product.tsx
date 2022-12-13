@@ -8,7 +8,7 @@ import {product} from "../../shared/information/product/product";
 import Navbar from '../../components/Navbar/Navbar';
 import {Swiper, SwiperSlide} from "swiper/react";
 
-import 'swiper/swiper.min.css';
+// import 'swiper/swiper.min.css';
 
 
 const Product: React.FC = () => {
