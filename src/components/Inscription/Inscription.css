@@ -22,11 +22,11 @@ input {
     border-radius : 5px;
 }
 
-#ion-react-wrapper > ion-grid > div > ion-grid > ion-row:nth-child(4) > ion-col > ion-item > ion-select {
+#ion-react-wrapper > ion-grid > div > form > ion-grid > ion-row:nth-child(4) > ion-col > ion-item > ion-select {
     padding-left :1vw !important;
 }
 
-#ion-react-wrapper > ion-grid > div > ion-grid > ion-row.mdpRow.md > ion-col:nth-child(2) > ion-item > ion-input {
+#ion-react-wrapper > ion-grid > div > form > ion-grid > ion-row.mdpRow.md > ion-col:nth-child(2) > ion-item > ion-input {
     margin-top: 2.5% !important;
 }
 

@@ -12,9 +12,9 @@ import {
     IonRow,
     useIonViewDidEnter,
 } from '@ionic/react';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Navbar/Navbar';
 import './Home.css';
-import Footer from '../../components/Footer';
+import Footer from '../../components/Footer/Footer';
 import servElmt from '../../assets/svg/storyset/servElmt.svg';
 import doubleFleche from '../../assets/svg/icons/doublefleche.svg';
 import serv from '../../assets/svg/storyset/serv.svg';

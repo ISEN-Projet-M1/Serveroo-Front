@@ -1,7 +1,6 @@
 import './Connexion.css';
-import img from '../assets/svg/storyset/password.svg'
 import { logoGoogle } from 'ionicons/icons';
-
+import img from '../../assets/svg/storyset/password.svg';
 import { IonGrid, IonRow, IonCol,IonInput, IonLabel, IonItem, IonCheckbox, IonButton,IonIcon} from '@ionic/react';
 
 interface ContainerProps { }
@@ -9,6 +8,7 @@ interface ContainerProps { }
 const Inscription: React.FC<ContainerProps> = () => {
   return (
     <div>
+        <form>
         <IonGrid>
             <IonRow>
                 <IonCol size='12'>
@@ -48,11 +48,11 @@ const Inscription: React.FC<ContainerProps> = () => {
                     <IonButton expand="block" color="light" className='btn2'><IonIcon src={logoGoogle} className="google ion-icon"></IonIcon>S'inscrire avec Google</IonButton>
                 </IonCol>
                 <IonCol>
-                    <IonButton expand="block" color="primary">S'inscrire</IonButton>
+                    <IonButton expand="block" color="primary" type='submit'>S'inscrire</IonButton>
                 </IonCol>
             </IonRow>
         </IonGrid>
-        
+        </form>
     </div>
   );
 };

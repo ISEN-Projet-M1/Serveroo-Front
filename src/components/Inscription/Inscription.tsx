@@ -1,5 +1,5 @@
 import './Inscription.css';
-import '../assets/svg/login_inscription/google.svg';
+import '../../assets/svg/login_inscription/google.svg';
 import { logoGoogle } from 'ionicons/icons';
 
 import { IonGrid, IonRow, IonCol,IonInput, IonLabel, IonItem, IonSelect, IonSelectOption, IonCheckbox, IonButton, IonIcon} from '@ionic/react';
@@ -9,6 +9,7 @@ interface ContainerProps { }
 const Inscription: React.FC<ContainerProps> = () => {
   return (
     <div>
+        <form>
         <IonGrid>
             <IonRow>
                 <IonCol size="5">
@@ -82,7 +83,7 @@ const Inscription: React.FC<ContainerProps> = () => {
                 <IonCol size='12'>
                     <IonItem lines='none'>
                         <IonCheckbox className='ion-checkbox'></IonCheckbox>
-                        <IonLabel className='conditions '>J’accepte les conditions générales et la politique de confidentialité de Serveroo</IonLabel>
+                        <IonLabel className='conditions '>J’accepte <a href='#'>les conditions générales</a> et <a href='#'>la politique de confidentialité</a> de Serveroo</IonLabel>
                     </IonItem>
                 </IonCol>
             </IonRow>
@@ -99,11 +100,11 @@ const Inscription: React.FC<ContainerProps> = () => {
                     <IonButton expand="block" color="light" className='btn2'><IonIcon src={logoGoogle} className="google ion-icon"></IonIcon>S'inscrire avec Google</IonButton>
                 </IonCol>
                 <IonCol>
-                    <IonButton expand="block" color="primary">S'inscrire</IonButton>
+                    <IonButton expand="block" color="primary" type='submit'>S'inscrire</IonButton>
                 </IonCol>
             </IonRow>
         </IonGrid>
-        
+        </form>
     </div>
   );
 };

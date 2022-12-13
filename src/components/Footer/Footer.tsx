@@ -1,12 +1,12 @@
 import './Footer.css';
-import Logo from "../assets/svg/logo.svg";
-import DrapeauFR from "../assets/svg/drapeauFR.svg";
-import Paiement from "../assets/svg/footer/paiement.svg";
-import Insta from "../assets/svg/footer/Instagram.svg";
-import Facebook from "../assets/svg/footer/Facebook.svg";
-import Linkedin from "../assets/svg/footer/Linkedin.svg";
-import Twitter from "../assets/svg/footer/Twitter.svg";
-import Youtube from "../assets/svg/footer/Youtube.svg";
+import Logo from "../../assets/svg/logo.svg";
+import DrapeauFR from "../../assets/svg/drapeauFR.svg";
+import Paiement from "../../assets/svg/footer/paiement.svg";
+import Insta from "../../assets/svg/footer/Instagram.svg";
+import Facebook from "../../assets/svg/footer/Facebook.svg";
+import Linkedin from "../../assets/svg/footer/Linkedin.svg";
+import Twitter from "../../assets/svg/footer/Twitter.svg";
+import Youtube from "../../assets/svg/footer/Youtube.svg";
 import { IonCol, IonItem, IonList, IonRow, IonSelect, IonSelectOption } from '@ionic/react';
 
 interface ContainerProps { }

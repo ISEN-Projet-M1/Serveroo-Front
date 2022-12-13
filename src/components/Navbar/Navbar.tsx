@@ -1,11 +1,11 @@
 import './Navbar.css';
-import Logo from "../assets/svg/logo.svg";
-import DrapeauFR from "../assets/svg/drapeauFR.svg";
+import Logo from "../../assets/svg/logo.svg";
+import DrapeauFR from "../../assets/svg/drapeauFR.svg";
 import React, {useState } from 'react';
 import { IonButton,IonToolbar, IonHeader,IonItem, IonList, IonSelect, IonSelectOption, IonModal, IonSegment, IonSegmentButton, IonLabel,IonRow,IonCol,IonGrid,IonIcon,IonText} from '@ionic/react';
 import {closeOutline} from 'ionicons/icons';
-import Inscription from '../components/Inscription';
-import Connexion from '../components/Connexion';
+import Inscription from '../Inscription/Inscription';
+import Connexion from '../Connexion/Connexion';
 import {useHistory} from 'react-router-dom';
 
 interface ContainerProps { }
@@ -40,7 +40,7 @@ const Navbar: React.FC<ContainerProps> = () => {
   }
 
   function goToFAQ(){
-    const thirdContent = document.querySelector('.rowfiveContent');
+    const thirdContent = document.querySelector('.fiveContent');
         thirdContent?.scrollIntoView({ behavior: 'smooth' });
   }
 
