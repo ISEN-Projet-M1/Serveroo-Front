@@ -5,9 +5,9 @@ import Home from './pages/home/Home';
 import Test from './pages/test/Test';
 import Product from './pages/product/Product';
 import Profile from './pages/profile/Profile';
-import Factures from './pages/profile/factures/Factures';
-import Services from './pages/profile/services/Services';
-import Commandes from './pages/profile/commandes/Commandes';
+import Factures from './pages/factures/Factures';
+import Services from './pages/services/Services';
+import Commandes from './pages/commandes/Commandes';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -50,13 +50,13 @@ const App: React.FC = () => (
         <Route exact path="/profile">
           <Profile />
         </Route>
-        <Route exact path="/profile/factures">
+        <Route exact path="/factures">
           <Factures />
         </Route>
-        <Route exact path="/profile/services">
+        <Route exact path="/services">
           <Services />
         </Route>
-        <Route exact path="/profile/commandes">
+        <Route exact path="/commandes">
           <Commandes />
         </Route>
       </IonRouterOutlet>
