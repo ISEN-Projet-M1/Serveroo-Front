@@ -3,12 +3,11 @@ import Logo from "../../assets/svg/logo.svg";
 import DrapeauFR from "../../assets/svg/drapeauFR.svg";
 import React, { useRef, useState } from 'react';
 import { IonButton, IonToolbar, IonHeader, IonItem, IonList, IonSelect, IonSelectOption, IonModal, IonSegment, IonSegmentButton, IonLabel, IonRow, IonCol, IonGrid, IonIcon, IonText } from '@ionic/react';
-import { closeOutline, codeDownloadSharp } from 'ionicons/icons';
+import { closeOutline } from 'ionicons/icons';
 import Inscription from '../Inscription/Inscription';
 import Connexion from '../Connexion/Connexion';
 import { useHistory } from 'react-router-dom';
-import { OverlayEventDetail } from '@ionic/react/dist/types/components/react-component-lib/interfaces';
-//import modalcontroller from react 
+import signOut from '../../assets/svg/icons/signOut.svg';
 
 
 interface ContainerProps { }
@@ -70,8 +69,9 @@ const Navbar: React.FC<ContainerProps> = () => {
               </IonSelect>
             </IonItem>
           </IonList>
+          {/*
+          <IonButton color="primary" className='login' slot="end" expand="block" onClick={createModal}><span className='btn'>Login</span></IonButton>*/}
 
-          <IonButton color="primary" className='login' slot="end" expand="block" onClick={createModal}><span className='btn'>Login</span></IonButton>
           {/* <IonModal trigger="open-modal" ref={modal}> */}
           <IonModal ref={modal}>
             <IonGrid>
@@ -93,6 +93,10 @@ const Navbar: React.FC<ContainerProps> = () => {
               <ChoixInscriptionConnexion></ChoixInscriptionConnexion>
             </IonGrid>
           </IonModal>
+          
+          
+          <IonText slot='end' className='pseudo'>Pilou</IonText>
+          <img slot='end' src={signOut} className='imgSignOut' height={40}/>
         </IonToolbar>
       </IonHeader>
     </div>

@@ -1,38 +1,29 @@
+import { useHistory } from 'react-router';
 import './Menu.css'
 
 const Menu: React.FC = () => {
 
-    function goProfile() {
-        window.location.href = '/profile';
+    const history = useHistory();
+
+    const routeChange = (path: string) => {
+        history.push(path);
     }
 
-    function goFactures() {
-        window.location.href = '/profile/factures';
-    }
-
-    function goServices() {
-        window.location.href = '/profile/services';
-    }
-
-    function goCommandes() {
-        window.location.href = '/profile/commandes';
-    }
 
     return (
         <div className='menu'>
-            <div className='btnMenu selectBtn' onClick={goProfile}>
+            <div className='btnMenu selectBtn' onClick={e => routeChange('/profile')}>
                 <span className='nameSelect'>Mon compte</span>
             </div>
-            <div className='btnMenu' onClick={goFactures}>
+            <div className='btnMenu' onClick={e => routeChange('/profile/factures')}>
                 <span className='name'>Mes factures</span>
             </div>
-            <div className='btnMenu' onClick={goServices}>
+            <div className='btnMenu' onClick={e => routeChange('/profile/services')}>
                 <span className='name'>Mes services</span>
             </div>
-            <div className='btnMenu' onClick={goCommandes}>
+            <div className='btnMenu' onClick={e => routeChange('/profile/commandes')}>
                 <span className='name'>Mes commandes</span>
             </div>
-
         </div>
     );
 };
