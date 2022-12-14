@@ -10,7 +10,7 @@ import {
     IonRow, IonCol, IonCard, IonCardTitle, IonCardContent, IonList, IonItem
 } from '@ionic/react';
 import React from "react";
-import Fleche from "../../assets/svg/flèche.svg"
+import Fleche from "../../assets/svg/fleche.svg"
 import "./Test.css"
 import {product} from "../../shared/information/product/product";
 
