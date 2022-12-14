@@ -1,37 +1,38 @@
-import {
-    IonContent,
-    IonItem,
-    IonLabel,
-    IonPage,
-    IonRadio,
-    IonRadioGroup,
-    RadioGroupCustomEvent,
-} from '@ionic/react';
 import './Menu.css'
 
 const Menu: React.FC = () => {
+
+    function goProfile() {
+        window.location.href = '/profile';
+    }
+
+    function goFactures() {
+        window.location.href = '/profile/factures';
+    }
+
+    function goServices() {
+        window.location.href = '/profile/services';
+    }
+
+    function goCommandes() {
+        window.location.href = '/profile/commandes';
+    }
+
     return (
         <div className='menu'>
-            <IonContent className="ion-padding">
-                <IonRadioGroup>
-                    <IonItem>
-                        <IonLabel className='nameOption'>Mon compte</IonLabel>
-                        <IonRadio value="account"></IonRadio>
-                    </IonItem>
-                    <IonItem>
-                        <IonLabel>Mes factures</IonLabel>
-                        <IonRadio value="factures"></IonRadio>
-                    </IonItem>
-                    <IonItem>
-                        <IonLabel>Mes services</IonLabel>
-                        <IonRadio value="services"></IonRadio>
-                    </IonItem>
-                    <IonItem>
-                        <IonLabel>Mes commandes</IonLabel>
-                        <IonRadio value="commandes"></IonRadio>
-                    </IonItem>
-                </IonRadioGroup>
-            </IonContent>
+            <div className='btnMenu selectBtn' onClick={goProfile}>
+                <span className='nameSelect'>Mon compte</span>
+            </div>
+            <div className='btnMenu' onClick={goFactures}>
+                <span className='name'>Mes factures</span>
+            </div>
+            <div className='btnMenu' onClick={goServices}>
+                <span className='name'>Mes services</span>
+            </div>
+            <div className='btnMenu' onClick={goCommandes}>
+                <span className='name'>Mes commandes</span>
+            </div>
+
         </div>
     );
 };

@@ -46,7 +46,7 @@ const Home: React.FC = () => {
         secondContent?.scrollIntoView({ behavior: 'smooth' });
     }
 
-    
+
 
     return (
         <IonPage id='page' >
@@ -143,7 +143,9 @@ const Home: React.FC = () => {
                             <IonAccordionGroup>
                                 <IonAccordion value="first">
                                     <IonItem slot="header" color="light" className='titleFAQ'>
-                                        <IonLabel>Re explorabat adducta a locum ?</IonLabel>
+                                        <div className='question'>
+                                            <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                        </div>
                                     </IonItem>
                                     <div className='ion-padding' slot="content">
                                         <IonRow>
@@ -155,7 +157,9 @@ const Home: React.FC = () => {
                                 </IonAccordion>
                                 <IonAccordion value="second">
                                     <IonItem slot="header" color="light" className='titleFAQ'>
-                                        <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                        <div className='question'>
+                                            <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                        </div>
                                     </IonItem>
                                     <div className='ion-padding descFAQ' slot="content">
                                         Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
@@ -163,7 +167,9 @@ const Home: React.FC = () => {
                                 </IonAccordion>
                                 <IonAccordion value="third">
                                     <IonItem slot="header" color="light" className='titleFAQ'>
-                                        <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                        <div className='question'>
+                                            <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                        </div>
                                     </IonItem>
                                     <div className='ion-padding descFAQ' slot="content">
                                         Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
@@ -171,7 +177,9 @@ const Home: React.FC = () => {
                                 </IonAccordion>
                                 <IonAccordion value="four">
                                     <IonItem slot="header" color="light" className='titleFAQ'>
-                                        <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                        <div className='question'>
+                                            <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                        </div>
                                     </IonItem>
                                     <div className='ion-padding descFAQ' slot="content">
                                         Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
@@ -179,7 +187,9 @@ const Home: React.FC = () => {
                                 </IonAccordion>
                                 <IonAccordion value="five">
                                     <IonItem slot="header" color="light" className='titleFAQ'>
-                                        <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                        <div className='question'>
+                                            <IonLabel >Re explorabat adducta a locum ?</IonLabel>
+                                        </div>
                                     </IonItem>
                                     <div className='ion-padding descFAQ' slot="content">
                                         Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.

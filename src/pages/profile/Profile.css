@@ -15,10 +15,11 @@
     font-size: 25px;
     margin: 0 0 0 30px;
     padding: 0;
+    color: var(--ion-color-tertiary);
 }
 
 .textImportant {
-    color: var(--ion-color-dark) !important;
+    color: var(--ion-color-tertiary) !important;
     font-size: 18px;
     margin: 20px 0 20px 30px;
 }

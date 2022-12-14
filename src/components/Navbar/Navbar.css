@@ -18,6 +18,7 @@ ion-text {
 
 .btnText {
     cursor: pointer;
+    color: var(--ion-color-tertiary);
 }
 
 .btnText:hover {
