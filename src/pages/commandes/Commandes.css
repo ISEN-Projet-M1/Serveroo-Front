@@ -1,0 +1,64 @@
+.itemGreen {
+    background-color: var(--ion-color-success-rgba);
+    color: var(--ion-color-success);
+    border-radius: 15px;
+    padding: 0 20px;
+    margin: 0 10px;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+}
+
+.itemRed {
+    background-color: var(--ion-color-danger-rgba);
+    color: var(--ion-color-danger);
+    border-radius: 15px;
+    padding: 0 10px;
+    margin: 0 10px;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+}
+
+.itemYellow {
+    background-color: var(--ion-color-warning-rgba);
+    color: var(--ion-color-warning);
+    border-radius: 15px;
+    padding: 0 10px;
+    margin: 0 10px;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+}
+
+.itemDark {
+    background-color: var(--ion-color-tertiary-rgba);
+    color: var(--ion-color-tertiary);
+    border-radius: 15px;
+    padding: 0 10px;
+    margin: 0 10px;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+}
+
+.items {
+    margin: 10px 0 10px 0;
+    text-align: center;
+}

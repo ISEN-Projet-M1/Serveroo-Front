@@ -76,4 +76,50 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
+}
+
+.btnEditProfile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.btnProfileForm {
+    margin: 0;
+    height: 40px;
+    display: flex;
+    width: 250px;
+}
+
+.rowProfil {
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.formEditProfile {
+    margin: 0 30px 0 30px;
+}
+
+#root > ion-app > ion-router-outlet > div > ion-content > ion-row > ion-col:nth-child(2) > div.border.profile > ion-col > div.editProfile > form > ion-col > ion-row > ion-col > ion-item > ion-select {
+    padding-left :1vw !important;
+}
+
+.btnProfileFormMdpOublie {
+    margin: 20px 0 20px 15px;
+    height: 40px;
+    display: flex;
+    width: 250px;
+}
+
+.rowBtnFacture {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
 }

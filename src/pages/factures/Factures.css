@@ -1,0 +1,45 @@
+.tabGrid {
+    margin: 75px 30px 30px 0px;
+}
+
+.titleFactures {
+    font-size: 32px;
+    margin: 30px 0 0 30px;
+    padding: 0;
+    color: var(--ion-color-tertiary);
+}
+
+.titres {
+    padding: 0;
+    color: var(--ion-color-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.items {
+    color: var(--ion-color-medium);
+    
+    padding: 10px;
+}
+
+.itemGrid {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+    display: grid;
+    place-items: center;
+}
+
+.items:hover {
+    background-color: var(--ion-color-danger-rgba);
+    border-radius: 15px;
+    color: var(--ion-color-tertiary);
+}
+
+.optionsImg {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
