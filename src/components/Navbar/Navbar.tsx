@@ -95,7 +95,7 @@ const Navbar: React.FC<ContainerProps> = () => {
           </IonModal>
           
           
-          <IonText slot='end' className='pseudo'>Pilou</IonText>
+          <IonText slot='end' className='pseudo' onClick={e => routeChange('/profile')}>Pilou</IonText>
           <img slot='end' src={signOut} className='imgSignOut' height={40}/>
         </IonToolbar>
       </IonHeader>
