@@ -27,7 +27,11 @@ import question from '../../assets/svg/storyset/question.svg';
 import Cookies from '../../components/Cookies/Cookies';
 import React from "react";
 
+import { useTranslation } from 'react-i18next';
+
 const Home: React.FC = () => {
+    const { t } = useTranslation();
+
     useIonViewDidEnter(() => {
         createAnimation()
             .addElement(document.querySelector('.doubleFleche')!)
@@ -57,6 +61,7 @@ const Home: React.FC = () => {
                 <div className='firstContent'>
                     <IonRow class='rowfirstContent'>
                         <IonCol>
+                            <p>{t("hello")}</p>
                             <p className='explain'>
                                 Nous proposons une solution pour <span className='colorOrange'>héberger vos projets</span> digitaux sur nos propres serveurs
                             </p>

@@ -9,11 +9,15 @@ import Connexion from '../Connexion/Connexion';
 import { useHistory } from 'react-router-dom';
 import signOut from '../../assets/svg/icons/signOut.svg';
 
+import { useTranslation } from 'react-i18next';
 
 interface ContainerProps { }
 
 const Navbar: React.FC<ContainerProps> = () => {
-  const [choix, setChoix] = useState("inscription");  
+  const { i18n } = useTranslation();
+  const languages = ['en', 'fr']; // List of available languages
+
+  const [choix, setChoix] = useState("inscription");
   const modal = useRef<HTMLIonModalElement>(null);
 
   function DisplayComponent(e: any) {
@@ -50,6 +54,11 @@ const Navbar: React.FC<ContainerProps> = () => {
     modal.current?.dismiss();
   }
 
+  function changeLang() {
+    let langue = 'en';
+    i18n.changeLanguage(langue === 'fr' ? 'fr' : 'en');
+  }
+
   return (
     <div className='nabbar'>
       <IonHeader class="ion-no-border" >
@@ -60,19 +69,20 @@ const Navbar: React.FC<ContainerProps> = () => {
           <IonText slot="end" onClick={goToProject} className='btnText'>Projet</IonText>
           <IonText slot="end" onClick={e => routeChange('product')} className='btnText' >Produits</IonText>
           <IonText slot="end" onClick={goToFAQ} className='btnText'>FAQ</IonText>
+          <IonText slot="end" onClick={changeLang} className='btnText'>CHANGE</IonText>
           <IonList slot="end">
             <IonItem>
               <img src={DrapeauFR} height={20} alt="drapeauFR" />
-              <IonSelect className="ion" interface="popover" placeholder="" disabled>
-                <IonSelectOption value="fr">FR</IonSelectOption>
-                <IonSelectOption value="en">EN</IonSelectOption>
+              <IonSelect className="ion" interface="popover" placeholder="fr">
+                <IonSelectOption value="fr" onClick={() => (i18n.changeLanguage('fr'), console.log("en"))}>FR</IonSelectOption>
+                <IonSelectOption value="en" onClick={() => ( console.log("en"), i18n.changeLanguage('en'), console.log("en"))}>EN</IonSelectOption>
               </IonSelect>
             </IonItem>
           </IonList>
           {/**/}
 
           <IonButton color="primary" className='login' slot="end" expand="block" onClick={createModal}><span className='btn'>Login</span></IonButton>
-          <IonModal trigger="open-modal" ref={modal}> 
+          <IonModal trigger="open-modal" ref={modal}>
             <IonGrid>
               <IonRow>
                 <IonCol>
@@ -86,13 +96,13 @@ const Navbar: React.FC<ContainerProps> = () => {
                   </IonSegment>
                 </IonCol>
                 <IonCol className='droite'>
-                  <IonIcon className='closePopUp ion-icon' size="large" src={closeOutline}  onClick={dismissModal}> </IonIcon>
+                  <IonIcon className='closePopUp ion-icon' size="large" src={closeOutline} onClick={dismissModal}> </IonIcon>
                 </IonCol>
               </IonRow>
               <ChoixInscriptionConnexion></ChoixInscriptionConnexion>
             </IonGrid>
           </IonModal>
-          
+
           {/* 
           <IonText slot='end' className='pseudo' onClick={e => routeChange('/profile')}>Pilou</IonText>
           <img slot='end' src={signOut} className='imgSignOut' height={40}/>*/}

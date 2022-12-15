@@ -31,6 +31,8 @@ import './theme/variables.css';
 import './App.css';
 import React from "react";
 
+import './i18n'
+
 setupIonicReact();
 
 const App: React.FC = () => (
