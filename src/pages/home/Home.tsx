@@ -25,6 +25,7 @@ import { logoGooglePlaystore } from 'ionicons/icons';
 import mobile from '../../assets/svg/storyset/mobile.svg';
 import question from '../../assets/svg/storyset/question.svg';
 import Cookies from '../../components/Cookies/Cookies';
+import React from "react";
 
 const Home: React.FC = () => {
     useIonViewDidEnter(() => {
@@ -34,15 +35,14 @@ const Home: React.FC = () => {
             .direction('alternate')
             .iterations(Infinity)
             .keyframes([
-                { offset: 0, transform: 'translateY(0px)', opacity: '1' },
+                {offset: 0, transform: 'translateY(0px)', opacity: '1'},
                 {
                     offset: 1, transform: 'translateY(25px)', opacity: '1'
                 }
-            ]).play();
+            ]).play().then();
     });
 
     function scrollToSecond() {
-        console.log('scroll')
         const secondContent = document.querySelector('.secondContent');
         secondContent?.scrollIntoView({ behavior: 'smooth' });
     }
