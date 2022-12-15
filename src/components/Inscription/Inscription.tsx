@@ -88,7 +88,7 @@ const Inscription: React.FC<ContainerProps> = () => {
                 </IonCol>
             </IonRow>
             <IonRow>
-                <IonCol size='12'>
+                <IonCol size='5'>
                     <IonItem lines='none'>
                         <IonCheckbox className='ion-checkbox'></IonCheckbox>
                         <IonLabel className='conditions'>J'accepte de recevoir des informations concernant les produits de Serveroo</IonLabel>

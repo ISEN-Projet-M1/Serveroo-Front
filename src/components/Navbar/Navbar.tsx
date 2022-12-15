@@ -69,11 +69,10 @@ const Navbar: React.FC<ContainerProps> = () => {
               </IonSelect>
             </IonItem>
           </IonList>
-          {/*
-          <IonButton color="primary" className='login' slot="end" expand="block" onClick={createModal}><span className='btn'>Login</span></IonButton>*/}
+          {/**/}
 
-          {/* <IonModal trigger="open-modal" ref={modal}> */}
-          <IonModal ref={modal}>
+          <IonButton color="primary" className='login' slot="end" expand="block" onClick={createModal}><span className='btn'>Login</span></IonButton>
+          <IonModal trigger="open-modal" ref={modal}> 
             <IonGrid>
               <IonRow>
                 <IonCol>
@@ -94,9 +93,9 @@ const Navbar: React.FC<ContainerProps> = () => {
             </IonGrid>
           </IonModal>
           
-          
+          {/* 
           <IonText slot='end' className='pseudo' onClick={e => routeChange('/profile')}>Pilou</IonText>
-          <img slot='end' src={signOut} className='imgSignOut' height={40}/>
+          <img slot='end' src={signOut} className='imgSignOut' height={40}/>*/}
         </IonToolbar>
       </IonHeader>
     </div>
