@@ -24,6 +24,7 @@ import designerGirl from '../../assets/svg/storyset/designerGirl.svg';
 import { logoGooglePlaystore } from 'ionicons/icons';
 import mobile from '../../assets/svg/storyset/mobile.svg';
 import question from '../../assets/svg/storyset/question.svg';
+import Cookies from '../../components/Cookies/Cookies';
 
 const Home: React.FC = () => {
     useIonViewDidEnter(() => {
@@ -204,6 +205,7 @@ const Home: React.FC = () => {
                 </div>
 
                 <Footer />
+                <Cookies></Cookies>
             </IonContent>
 
         </IonPage>

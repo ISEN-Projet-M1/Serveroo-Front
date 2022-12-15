@@ -8,6 +8,7 @@ import Profile from './pages/profile/Profile';
 import Factures from './pages/factures/Factures';
 import Services from './pages/services/Services';
 import Commandes from './pages/commandes/Commandes';
+import Serveur from './pages/serveur/Serveur';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -58,6 +59,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/commandes">
           <Commandes />
+        </Route>
+        <Route exact path="/serveur">
+          <Serveur />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

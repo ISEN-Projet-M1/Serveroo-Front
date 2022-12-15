@@ -14,3 +14,8 @@
     margin: 20px auto 20px auto;
     gap: 15px;
 }
+
+.click {
+    cursor: pointer !important;
+}
+

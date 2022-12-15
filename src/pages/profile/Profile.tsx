@@ -32,10 +32,10 @@ const Profile: React.FC = () => {
         let toHiddenEdit = document.querySelectorAll('.toHiddenEdit');
         let toHiddenEditForm = document.querySelectorAll('.editProfile');
         for (let i = 0; i < toHiddenEdit.length; i++) {
-            toHiddenEdit[i].setAttribute('style', 'display: none');
+            toHiddenEdit[i].setAttribute('hidden', 'true');
         }
         for (let i = 0; i < toHiddenEditForm.length; i++) {
-            toHiddenEditForm[i].setAttribute('style', 'display: block');
+            toHiddenEditForm[i].removeAttribute('hidden');
         }
     }
 
@@ -43,10 +43,10 @@ const Profile: React.FC = () => {
         let toHiddenEdit = document.querySelectorAll('.toHiddenEdit');
         let toHiddenEditForm = document.querySelectorAll('.editProfile');
         for (let i = 0; i < toHiddenEdit.length; i++) {
-            toHiddenEdit[i].setAttribute('style', 'display: block');
+            toHiddenEdit[i].removeAttribute('hidden');
         }
         for (let i = 0; i < toHiddenEditForm.length; i++) {
-            toHiddenEditForm[i].setAttribute('style', 'display: none');
+            toHiddenEditForm[i].setAttribute('hidden', 'true');
         }
     }
 
