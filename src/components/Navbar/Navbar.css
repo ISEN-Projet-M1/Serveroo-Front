@@ -60,9 +60,8 @@ ion-modal{
     --width : max-content;
 }
 
-ion-grid{
+.grid {
     width: 100% !important;
-    margin-top: 2%;
 }
 
 .droite {

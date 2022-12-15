@@ -28,19 +28,19 @@ const Menu: React.FC = () => {
         <div className='menu'>
             <IonList className='list'>
                 <IonItem routerLink="/profile"
-                    className={getClassName('1') + ' item'} lines={'none'}>
+                    className={getClassName('1') + ' marginItem'} lines={'none'}>
                     <span className={getClassName2('1') + ' name'}>Mon compte</span>
                 </IonItem>
                 <IonItem routerLink="/factures"
-                    className={getClassName('2')} lines={'none'}>
+                    className={getClassName('2') + ' marginItem'} lines={'none'}>
                     <span className={getClassName2('2') + ' name'}>Mes factures</span>
                 </IonItem>
                 <IonItem routerLink="/services"
-                    className={getClassName('3')} lines={'none'}>
+                    className={getClassName('3') + ' marginItem'} lines={'none'}>
                     <span className={getClassName2('3') + ' name'}>Mes services</span>
                 </IonItem>
                 <IonItem routerLink="/commandes"
-                    className={getClassName('4')} lines={'none'}>
+                    className={getClassName('4') + ' marginItem'} lines={'none'}>
                     <span className={getClassName2('4') + ' name'}>Mes commandes</span>
                 </IonItem>
             </IonList>

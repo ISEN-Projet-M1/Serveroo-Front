@@ -3,6 +3,7 @@ import '../../assets/svg/login_inscription/google.svg';
 import { logoGoogle } from 'ionicons/icons';
 
 import { IonGrid, IonRow, IonCol,IonInput, IonLabel, IonItem, IonSelect, IonSelectOption, IonCheckbox, IonButton, IonIcon} from '@ionic/react';
+import React from "react";
 
 interface ContainerProps { }
 
