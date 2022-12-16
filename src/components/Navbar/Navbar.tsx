@@ -50,6 +50,8 @@ const Navbar: React.FC<ContainerProps> = () => {
   }
 
   async function createModal() {
+    let modal2 = document.getElementById('ion-overlay-1');
+    modal2?.setAttribute('style', 'display: flex');
     if (modal.current) {
       modal.current.present()
     }
