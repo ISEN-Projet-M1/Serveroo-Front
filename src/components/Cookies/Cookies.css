@@ -25,8 +25,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 25px 50px 25px 50px;
     gap: 30px;
+    margin-top: 50px;
 }
 
 .hrefClick {
@@ -34,7 +34,6 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-right: 60px;
     color: var(--ion-color-primary);
     text-decoration: underline;
 }

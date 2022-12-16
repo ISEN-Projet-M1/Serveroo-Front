@@ -6,12 +6,13 @@ import img from '../../assets/svg/storyset/password.svg';
 import { IonGrid, IonRow, IonCol,IonInput, IonLabel, IonItem, IonCheckbox, IonButton,IonIcon} from '@ionic/react';
 import {useEffect} from 'react';
 import React, { useState } from 'react';
-import { cP } from 'chart.js/dist/chunks/helpers.core';
+import { useTranslation } from 'react-i18next';
 
 interface ContainerProps { }
 
 const Connexion: React.FC<ContainerProps> = () => {
-
+    const { i18n, t } = useTranslation();
+    
     const [mail, setMail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [stayConnected, setStayConnected] = useState<boolean>(false);
@@ -84,8 +85,8 @@ const Connexion: React.FC<ContainerProps> = () => {
                 <IonCol size='12'>
                     <IonItem lines='none'>
                         <IonLabel position="stacked" className='label'>
-                            <IonRow>Adresse mail<p className='rouge'>*</p></IonRow></IonLabel>
-                        <IonInput className='ion-input' type='email' placeholder="exemple@gmail.com" value={mail} onIonChange={(e) => setMail(e.detail.value!)}></IonInput>
+                            <IonRow>{t('connexion.email')}<p className='rouge'>*</p></IonRow></IonLabel>
+                        <IonInput className='ion-input' type='email' placeholder={t("connexion.exempleEMail") ?? ""} value={mail} onIonChange={(e) => setMail(e.detail.value!)}></IonInput>
                     </IonItem>
                 </IonCol>
                     
@@ -94,8 +95,8 @@ const Connexion: React.FC<ContainerProps> = () => {
                 <IonCol size='12'>
                     <IonItem lines='none'>
                         <IonLabel position="stacked" className='label'>
-                            <IonRow>Mot de passe<p className='rouge'>*</p></IonRow></IonLabel>
-                        <IonInput className='ion-input' type='password' placeholder="Mot de passe" value={password}  onIonChange={(e) => setPassword(e.detail.value!)}></IonInput>
+                            <IonRow>{t('connexion.password')}<p className='rouge'>*</p></IonRow></IonLabel>
+                        <IonInput className='ion-input' type='password' placeholder={t("connexion.password") ?? ""}  onIonChange={(e) => setPassword(e.detail.value!)}></IonInput>
                     </IonItem>
                 </IonCol>
                     
@@ -104,7 +105,7 @@ const Connexion: React.FC<ContainerProps> = () => {
                 <IonCol size='12'>
                     <IonItem lines='none'>
                         <IonCheckbox className='ion-checkbox' value={stayConnected}  onIonChange={(e) => setStayConnected(e.detail.value!)}></IonCheckbox>
-                        <IonLabel className='connexion'>Restez connecté·e ?</IonLabel>
+                        <IonLabel className='connexion'>{t('connexion.log')}</IonLabel>
                     </IonItem>
                 </IonCol>
             </IonRow>
@@ -115,10 +116,10 @@ const Connexion: React.FC<ContainerProps> = () => {
             </IonRow>
             <IonRow>
                 <IonCol>
-                    <IonButton expand="block" color="light" className='btn2'><IonIcon src={logoGoogle} className="google ion-icon"></IonIcon>S'inscrire avec Google</IonButton>
+                    <IonButton expand="block" color="light" className='btn2'><IonIcon src={logoGoogle} className="google ion-icon"></IonIcon>{t('connexion.google')}</IonButton>
                 </IonCol>
                 <IonCol>
-                    <IonButton expand="block" color="primary" type='submit'>Se connecter</IonButton>
+                    <IonButton expand="block" color="primary" type='submit'>{t('connexion.login')}</IonButton>
                 </IonCol>
             </IonRow>
         </IonGrid>
