@@ -18,8 +18,8 @@ i18next
             }
 
         },
-        lng: 'fr',
-        fallbackLng: 'fr',
+        lng: localStorage.getItem('i18nextLng'),
+        fallbackLng: localStorage.getItem('i18nextLng'),
         interpolation: {
             escapeValue: false
         }

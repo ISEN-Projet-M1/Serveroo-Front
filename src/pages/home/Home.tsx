@@ -54,14 +54,13 @@ const Home: React.FC = () => {
 
 
     return (
-        <IonPage id='page' >
+        <IonPage id='page'>
             <IonContent fullscreen>
                 <Navbar />
 
                 <div className='firstContent'>
                     <IonRow class='rowfirstContent'>
                         <IonCol>
-                            <p>{t("hello")}</p>
                             <p className='explain'>
                                 Nous proposons une solution pour <span className='colorOrange'>héberger vos projets</span> digitaux sur nos propres serveurs
                             </p>

@@ -77,3 +77,9 @@ input {
 .inscrire{
     margin-top: 2%;
 }
+
+.informationsSecondBtn {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+}

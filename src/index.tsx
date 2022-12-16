@@ -5,12 +5,20 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import './App.css';
 
+import { I18nextProvider, getI18n, withSSR } from 'react-i18next';
+
 const container = document.getElementById('root');
 const root = createRoot(container!);
+let i18n = getI18n();
+const ExtendedApp = withSSR()(App);
+console.log(localStorage);
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <I18nextProvider i18n={i18n}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </I18nextProvider>
 );
 
 // If you want your app to work offline and load faster, you can change
