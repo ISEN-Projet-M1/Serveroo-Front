@@ -1,6 +1,7 @@
 
 import './Connexion.css';
 import { logoGoogle } from 'ionicons/icons';
+import { ReactSession } from 'react-client-session';
 import img from '../../assets/svg/storyset/password.svg';
 import { IonGrid, IonRow, IonCol,IonInput, IonLabel, IonItem, IonCheckbox, IonButton,IonIcon} from '@ionic/react';
 import {useEffect} from 'react';
@@ -37,7 +38,6 @@ const Inscription: React.FC<ContainerProps> = () => {
         .then(response => {
             console.log(response);
             //Get the cookie from the response
-            console.log(response.headers.get('set-cookie'));
             
             return response.json();
         })
@@ -45,7 +45,10 @@ const Inscription: React.FC<ContainerProps> = () => {
             console.log('Success:', data);
             //check the status of the response
             if(data.state === 200){
-                
+                localStorage.clear();
+                ReactSession.setStoreType("localStorage");
+                ReactSession.set("session", data.session);
+                ReactSession.set("login", true);
             }else{
                 //if error, display the error message
                 alert("votre mail ou mot de passe est incorrect");
