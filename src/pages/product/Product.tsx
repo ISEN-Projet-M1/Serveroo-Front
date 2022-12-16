@@ -74,7 +74,7 @@ const Product: React.FC = () => {
                                                                 oneProduct.description.map((item: string) => {
                                                                     return (<IonItem key={item} lines="none" className="sansBackground">
                                                                         <img src={Fleche} alt="Flèche"/>
-                                                                        <IonLabel className="ion-text-wrap label">{item}</IonLabel>
+                                                                        <IonLabel className="ion-text-wrap label1">{item}</IonLabel>
                                                                     </IonItem>);
                                                                 })
                                                             }
