@@ -31,44 +31,44 @@ import './theme/variables.css';
 import './App.css';
 import React from "react";
 
-import './i18n'
+import './i18n';
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/test">
-          <Test />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-        <Route exact path="/product">
-          <Product />
-        </Route>
-        <Route exact path="/profile">
-          <Profile />
-        </Route>
-        <Route exact path="/factures">
-          <Factures />
-        </Route>
-        <Route exact path="/services">
-          <Services />
-        </Route>
-        <Route exact path="/commandes">
-          <Commandes />
-        </Route>
-        <Route exact path="/serveur">
-          <Serveur />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+          <Route exact path="/test">
+            <Test />
+          </Route>
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+          <Route exact path="/product">
+            <Product />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
+          </Route>
+          <Route exact path="/factures">
+            <Factures />
+          </Route>
+          <Route exact path="/services">
+            <Services />
+          </Route>
+          <Route exact path="/commandes">
+            <Commandes />
+          </Route>
+          <Route exact path="/serveur">
+            <Serveur />
+          </Route>
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
 );
 
 export default App;
