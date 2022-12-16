@@ -1,21 +1,74 @@
+
 import './Connexion.css';
 import { logoGoogle } from 'ionicons/icons';
 import img from '../../assets/svg/storyset/password.svg';
 import { IonGrid, IonRow, IonCol,IonInput, IonLabel, IonItem, IonCheckbox, IonButton,IonIcon} from '@ionic/react';
+import {useEffect} from 'react';
+import React, { useState } from 'react';
 
 interface ContainerProps { }
 
 const Inscription: React.FC<ContainerProps> = () => {
+
+    const [mail, setMail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const [stayConnected, setStayConnected] = useState<boolean>(false);
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        console.log(mail,password,stayConnected);
+
+        const data = {
+            "mail": mail,
+            "password": password,
+            "stayConnect": stayConnected,
+            "sessionId": "rfezv324F"
+        }
+
+        //use fetch to send data to the server
+        fetch(process.env.REACT_APP_API_URL+'/api/connect', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        }
+        )
+        .catch((error) => {
+            console.error('Error:', error);
+        }
+        );
+
+        
+    };
+
+    useEffect(() => {
+        const keyDownHandler = (e: any) => {
+            if (e.key === 'Enter') {
+                handleSubmit(e);
+            }
+        };
+        window.addEventListener('keydown', keyDownHandler);
+        return () => {
+            window.removeEventListener('keydown', keyDownHandler);
+        };
+    }, []);
+
+
   return (
     <div>
-        <form>
+        <form onSubmit={handleSubmit}>
         <IonGrid>
             <IonRow>
                 <IonCol size='12'>
                     <IonItem lines='none'>
                         <IonLabel position="stacked" className='label'>
                             <IonRow>Adresse mail<p className='rouge'>*</p></IonRow></IonLabel>
-                        <IonInput className='ion-input' type='email' placeholder="exemple@gmail.com"></IonInput>
+                        <IonInput className='ion-input' type='email' placeholder="exemple@gmail.com" value={mail} onIonChange={(e) => setMail(e.detail.value!)}></IonInput>
                     </IonItem>
                 </IonCol>
                     
@@ -25,7 +78,7 @@ const Inscription: React.FC<ContainerProps> = () => {
                     <IonItem lines='none'>
                         <IonLabel position="stacked" className='label'>
                             <IonRow>Mot de passe<p className='rouge'>*</p></IonRow></IonLabel>
-                        <IonInput className='ion-input' type='password' placeholder="Mot de passe"></IonInput>
+                        <IonInput className='ion-input' type='password' placeholder="Mot de passe" value={password}  onIonChange={(e) => setPassword(e.detail.value!)}></IonInput>
                     </IonItem>
                 </IonCol>
                     
@@ -33,7 +86,7 @@ const Inscription: React.FC<ContainerProps> = () => {
             <IonRow>
                 <IonCol size='12'>
                     <IonItem lines='none'>
-                        <IonCheckbox className='ion-checkbox'></IonCheckbox>
+                        <IonCheckbox className='ion-checkbox' value={stayConnected}  onIonChange={(e) => setStayConnected(e.detail.value!)}></IonCheckbox>
                         <IonLabel className='connexion'>Restez connecté·e ?</IonLabel>
                     </IonItem>
                 </IonCol>
@@ -48,7 +101,7 @@ const Inscription: React.FC<ContainerProps> = () => {
                     <IonButton expand="block" color="light" className='btn2'><IonIcon src={logoGoogle} className="google ion-icon"></IonIcon>S'inscrire avec Google</IonButton>
                 </IonCol>
                 <IonCol>
-                    <IonButton expand="block" color="primary" type='submit'>S'inscrire</IonButton>
+                    <IonButton expand="block" color="primary" type='submit'>Se connecter</IonButton>
                 </IonCol>
             </IonRow>
         </IonGrid>
