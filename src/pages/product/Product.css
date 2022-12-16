@@ -1,16 +1,78 @@
-.swiper {
-    width: 100%;
-    height: fit-content;
-    margin-bottom: 3%;
-    margin-top:3%;
+.rowSwiper {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin-bottom: 3%;*/
+    /*margin-top:3%;*/
+    margin-bottom: 1vh;
+}
+
+.swiper .swiper-slide{
+    align-items: inherit !important;
 }
 
 .ProductCard{
-    height: 100%;
+    height: fit-content;
     background-color: var(--ion-color-medium-rgba2);
 }
 
 .center{
     color : var(--ion-color-tertiary);
+    height: 5vh;
 }
+
+.sansBackground{
+    --background: none;
+    background: none;
+}
+
+.config{
+    height:10vh;
+    --border-radius: 10px !important;
+}
+
+.label{
+    --color : var(--ion-color-blue) !important;
+}
+
+.align {
+    display: flex;
+    justify-content: center !important;
+}
+
+.content{
+    height : 25vh;
+
+}
+
+.presentation{
+    margin-top:2%;
+    width: 80% !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.logo{
+    max-width: 13vw !important;
+    /*position : relative;*/
+    /*z-index:2;*/
+    /*bottom : 42px;*/
+    /*right : 10px;*/
+    /*width: 140px !important;*/
+}
+
+.centerLogo {
+    position : relative;
+    z-index:2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom : 4vh;
+    height: 7vh;
+}
+
+
+
 

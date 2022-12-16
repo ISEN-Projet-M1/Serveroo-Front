@@ -1,7 +1,8 @@
 export const product = [
     {
         title: 'Serveur de jeu pour le jeu vidéo Minecraft',
-        image: 'Minecraft.png',
+        image: 'minecraft.svg',
+        logo : 'logoMinecraft.svg',
         description: [
             'Maximum 10 joueurs',
             'RAM maximal : 8Go',
@@ -11,7 +12,8 @@ export const product = [
     },
     {
         title: 'Système d’exploitation Linux composée exclusivement de logiciels libres',
-        image: 'Minecraft.png',
+        image: 'debian.svg',
+        logo : 'logoDebian.svg',
         description: [
             'RAM maximal : 8Go',
             'Services préinstallés : OpenSSH, SFTP',
@@ -20,7 +22,8 @@ export const product = [
     },
     {
         title: 'Plateforme logicielle libre en JavaScript',
-        image: 'Minecraft.png',
+        image: 'node.svg',
+        logo : 'logoNode.svg',
         description: [
             'RAM maximal : 8Go',
             'Services préinstallés : OpenSSH, SFTP',

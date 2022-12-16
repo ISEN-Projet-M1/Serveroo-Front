@@ -10,7 +10,7 @@ import { cP } from 'chart.js/dist/chunks/helpers.core';
 
 interface ContainerProps { }
 
-const Inscription: React.FC<ContainerProps> = () => {
+const Connexion: React.FC<ContainerProps> = () => {
 
     const [mail, setMail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
@@ -127,4 +127,4 @@ const Inscription: React.FC<ContainerProps> = () => {
   );
 };
 
-export default Inscription;
+export default Connexion;
