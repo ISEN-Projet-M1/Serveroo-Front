@@ -5,6 +5,7 @@ import img from '../../assets/svg/storyset/password.svg';
 import { IonGrid, IonRow, IonCol,IonInput, IonLabel, IonItem, IonCheckbox, IonButton,IonIcon} from '@ionic/react';
 import {useEffect} from 'react';
 import React, { useState } from 'react';
+import { cP } from 'chart.js/dist/chunks/helpers.core';
 
 interface ContainerProps { }
 
@@ -33,9 +34,22 @@ const Inscription: React.FC<ContainerProps> = () => {
             },
             body: JSON.stringify(data),
         })
-        .then(response => response.json())
+        .then(response => {
+            console.log(response);
+            //Get the cookie from the response
+            console.log(response.headers.get('set-cookie'));
+            
+            return response.json();
+        })
         .then(data => {
             console.log('Success:', data);
+            //check the status of the response
+            if(data.state === 200){
+                
+            }else{
+                //if error, display the error message
+                alert("votre mail ou mot de passe est incorrect");
+            }
         }
         )
         .catch((error) => {
