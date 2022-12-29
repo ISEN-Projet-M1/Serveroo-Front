@@ -23,7 +23,6 @@ ion-text {
 
 .btnText:hover {
     color: var(--ion-color-primary);
-    background-color: var(--ion-color-primary-rgba);
 }
 
 ion-select-popover {

@@ -9,6 +9,9 @@
 .swiper .swiper-slide{
     align-items: inherit !important;
 }
+.swiper-pagination {
+    position: relative !important;
+}
 
 .ProductCard{
     height: fit-content;
@@ -73,6 +76,10 @@
     height: 7vh;
 }
 
-
-
-
+.doubleFlecheConfig {
+    display: block;
+    margin: 5px auto;
+    width: 47px;
+    height: 50px;
+    cursor: pointer;
+}
