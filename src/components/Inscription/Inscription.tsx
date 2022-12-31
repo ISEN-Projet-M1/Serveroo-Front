@@ -27,7 +27,7 @@ const Inscription: React.FC<ContainerProps> = () => {
             message: msg,
             color: 'success',
             position: position,
-            duration: 1400,
+            duration: 2800,
         });
     };
 

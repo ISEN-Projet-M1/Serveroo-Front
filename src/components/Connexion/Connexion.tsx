@@ -3,7 +3,7 @@ import './Connexion.css';
 import { logoGoogle } from 'ionicons/icons';
 import { ReactSession } from 'react-client-session';
 import img from '../../assets/svg/storyset/password.svg';
-import { IonGrid, IonRow, IonCol,IonInput, IonLabel, IonItem, IonCheckbox, IonButton,IonIcon} from '@ionic/react';
+import { IonGrid, IonRow, IonCol,IonInput, IonLabel, IonItem, IonCheckbox, IonButton,IonIcon, useIonToast} from '@ionic/react';
 import {useEffect} from 'react';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -12,10 +12,20 @@ interface ContainerProps { }
 
 const Connexion: React.FC<ContainerProps> = () => {
     const { i18n, t } = useTranslation();
+    const [present] = useIonToast();
     
     const [mail, setMail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [stayConnected, setStayConnected] = useState<boolean>(false);
+
+    const ToastErreur = (position: 'top' | 'middle' | 'bottom', msg: any) => {
+        present({
+            message: msg,
+            color: 'danger',
+            position: position,
+            duration: 1400,
+        });
+    };
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
@@ -46,13 +56,17 @@ const Connexion: React.FC<ContainerProps> = () => {
             console.log('Success:', data);
             //check the status of the response
             if(data.state === 200){
-                localStorage.clear();
                 ReactSession.setStoreType("localStorage");
-                ReactSession.set("session", data.session);
+                ReactSession.set("session", data);
                 ReactSession.set("login", true);
+
+                console.log(ReactSession.get("session"));
+                e.target.reset();
+
+                window.location.href = "/home";
             }else{
                 //if error, display the error message
-                alert("votre mail ou mot de passe est incorrect");
+                ToastErreur('top', 'Votre mail ou votre mot de passe est incorrect');
             }
         }
         )
@@ -104,7 +118,7 @@ const Connexion: React.FC<ContainerProps> = () => {
             <IonRow>
                 <IonCol size='12'>
                     <IonItem lines='none'>
-                        <IonCheckbox className='ion-checkbox' value={stayConnected}  onIonChange={(e) => setStayConnected(e.detail.value!)}></IonCheckbox>
+                        <IonCheckbox className='ion-checkbox' value={stayConnected} onIonChange={(e) => setStayConnected(e.detail.checked!)}></IonCheckbox>
                         <IonLabel className='connexion'>{t('connexion.log')}</IonLabel>
                     </IonItem>
                 </IonCol>
